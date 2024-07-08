@@ -1,0 +1,18 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "test-component-backstage"
+  annotations:
+    github.com/project-slug: "larisa-sehic/test-component-backstage"
+    newrelic.com/dashboard-guid: 'MzEwNTQR8ZGE6NDUwNTEzNQ'
+    sonarqube.org/project-key: 'e4_HURmDei0uWWjS3s'
+    pagerduty.com/integration-key: 'a36133058d5c91'
+    additional-info/stream-lead: 'Jane doe'
+    additional-info/engineering-manager: 'John Doe'
+    additional-info/tech-lead: 'Unknown'
+    tier-info/tier: '0'
+spec:
+  type: service
+  lifecycle: production
+  owner: darwin
+  system: platform
