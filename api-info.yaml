@@ -8,15 +8,16 @@ spec:
   owner: engineering
   system: platform
   definition: |
-    openapi: "3.0.0"
-    info:
-      version: 1.0.0
-      title: Artist API
-      license:
-        name: MIT
-    servers:
-      - url: http://artist.spotify.net/v1
-    paths:
-      /artists:
-        get:
-          summary: List all artist
+    type Artist {
+      id: ID!
+      name: String!
+      genres: [String!]
+    }
+
+    type Query {
+      artists(filter: ArtistFilter): [Artist!]!
+    }
+
+    input ArtistFilter {
+      name: String
+    }
